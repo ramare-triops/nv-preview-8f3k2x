@@ -10,8 +10,7 @@ const navLinks = [
 <header class="header">
   <div class="container header-container">
     <a href="/" class="logo">
-      <span class="logo-nandy">NANDY</span>
-      <span class="logo-vitalite">Vitalité</span>
+      <img src="/images/logo.png" alt="NANDY Vitalité" class="logo-img" width="160" height="50" />
     </a>
 
     <!-- Desktop Navigation -->
@@ -86,21 +85,13 @@ const navLinks = [
   /* Logo */
   .logo {
     display: flex;
-    align-items: baseline;
-    gap: 0.35rem;
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 700;
+    align-items: center;
     text-decoration: none;
   }
 
-  .logo-nandy {
-    color: var(--color-primary);
-  }
-
-  .logo-vitalite {
-    color: var(--color-secondary);
-    font-style: italic;
+  .logo-img {
+    height: 40px;
+    width: auto;
   }
 
   /* Desktop Navigation */
@@ -205,8 +196,8 @@ const navLinks = [
       height: 5rem;
     }
 
-    .logo {
-      font-size: 1.5rem;
+    .logo-img {
+      height: 50px;
     }
 
     .nav-desktop {
