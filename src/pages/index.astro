@@ -8,7 +8,8 @@ import Layout from '../layouts/Layout.astro';
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <div class="hero-text">
-        <h1 class="hero-title">Grégory MASSAMBA</h1>
+        <h1 class="hero-title">Nandy Vitalité</h1>
+        <p class="hero-candidate">Grégory MASSAMBA</p>
         <p class="hero-subtitle">Candidat aux élections municipales de Nandy 2026</p>
         <p class="hero-tagline">Ensemble, écrivons le prochain chapitre de notre histoire commune.</p>
       </div>
@@ -66,7 +67,7 @@ import Layout from '../layouts/Layout.astro';
   /* Hero Section */
   .hero {
     position: relative;
-    background: linear-gradient(135deg, #026f86 0%, #038a9e 100%);
+    background: linear-gradient(135deg, #014d5e 0%, #026f86 100%);
     color: white;
     padding: var(--spacing-3xl) 0;
     overflow: hidden;
@@ -91,14 +92,22 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .hero-title {
-    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-size: clamp(2.2rem, 7vw, 4rem);
     color: white;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
+  .hero-candidate {
+    font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+    color: var(--color-accent);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    font-family: var(--font-heading);
+  }
+
   .hero-subtitle {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-size: clamp(0.95rem, 2.5vw, 1.15rem);
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: var(--spacing-lg);
     font-weight: 500;
