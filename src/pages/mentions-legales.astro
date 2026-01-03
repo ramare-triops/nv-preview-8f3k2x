@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Mentions légales" description="Mentions légales du site de campagne de Grégory MASSAMBA, candidat aux élections municipales de Nandy 2026">
+  <section class="legal-page">
+    <div class="container">
+      <h1 class="page-title">Mentions légales</h1>
+
+      <div class="legal-content">
+        <article class="legal-section">
+          <h2>Éditeur du site</h2>
+          <p>
+            Ce site est édité par <strong>Grégory MASSAMBA</strong>, candidat aux élections municipales de Nandy 2026.
+          </p>
+          <p>
+            Adresse : Nandy (77176), Seine-et-Marne, France
+          </p>
+        </article>
+
+        <article class="legal-section">
+          <h2>Responsable de publication</h2>
+          <p>
+            Le responsable de la publication est <strong>Grégory MASSAMBA</strong>.
+          </p>
+        </article>
+
+        <article class="legal-section">
+          <h2>Hébergement</h2>
+          <p>
+            Ce site est hébergé par :
+          </p>
+          <address>
+            <strong>Vercel Inc.</strong><br>
+            440 N Barranca Ave #4133<br>
+            Covina, CA 91723<br>
+            États-Unis
+          </address>
+        </article>
+
+        <article class="legal-section">
+          <h2>Nature du site</h2>
+          <p>
+            Ce site est un <strong>site de campagne électorale</strong> dans le cadre des élections municipales de mars 2026 à Nandy (77176).
+          </p>
+          <p>
+            Conformément à la législation en vigueur, ce site a pour objet de présenter la candidature et le programme de Grégory MASSAMBA aux électeurs de la commune de Nandy.
+          </p>
+        </article>
+
+        <article class="legal-section">
+          <h2>Protection des données personnelles</h2>
+          <p>
+            Ce site <strong>ne collecte aucune donnée personnelle</strong>. Aucun cookie de suivi, aucun formulaire de contact, aucune inscription à une newsletter ne sont mis en place.
+          </p>
+          <p>
+            Aucune donnée n'est transmise à des tiers.
+          </p>
+        </article>
+
+        <article class="legal-section">
+          <h2>Droit à l'image</h2>
+          <p>
+            Les photographies publiées sur ce site sont utilisées avec l'autorisation expresse des personnes représentées ou sont libres de droits.
+          </p>
+          <p>
+            Pour toute demande concernant le droit à l'image, veuillez contacter le responsable de publication.
+          </p>
+        </article>
+
+        <article class="legal-section">
+          <h2>Propriété intellectuelle</h2>
+          <p>
+            L'ensemble des contenus présents sur ce site (textes, images, graphismes, logo, icônes) sont la propriété exclusive de l'éditeur du site, sauf mention contraire.
+          </p>
+          <p>
+            Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable.
+          </p>
+        </article>
+
+        <article class="legal-section">
+          <h2>Crédits</h2>
+          <p>
+            Site réalisé avec <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a>.
+          </p>
+        </article>
+
+        <article class="legal-section">
+          <h2>Mise à jour</h2>
+          <p>
+            Dernière mise à jour des mentions légales : Janvier 2026
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal-page {
+    padding: var(--spacing-2xl) 0 var(--spacing-3xl);
+    background-color: var(--color-bg-alt);
+    min-height: calc(100vh - 200px);
+  }
+
+  .page-title {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    position: relative;
+  }
+
+  .page-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    margin: var(--spacing-md) auto 0;
+    border-radius: 2px;
+  }
+
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-bg);
+    padding: var(--spacing-xl);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .legal-section {
+    margin-bottom: var(--spacing-2xl);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .legal-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .legal-section h2 {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .legal-section p {
+    color: var(--color-text);
+    line-height: 1.7;
+  }
+
+  .legal-section address {
+    font-style: normal;
+    color: var(--color-text);
+    line-height: 1.7;
+    margin-top: var(--spacing-sm);
+  }
+
+  .legal-section a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  .legal-section a:hover {
+    color: var(--color-secondary);
+  }
+
+  /* Medium screens and up */
+  @media (min-width: 768px) {
+    .legal-content {
+      padding: var(--spacing-2xl) var(--spacing-3xl);
+    }
+  }
+</style>

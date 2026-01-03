@@ -1,0 +1,111 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Modal from '../components/Modal.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Site de campagne de Grégory MASSAMBA, candidat aux élections municipales de Nandy 2026"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#1a365d" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | NANDY Vitalité 2026</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={`${title} | NANDY Vitalité 2026`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+  </head>
+  <body>
+    <Header />
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
+    <Modal />
+
+    <script>
+      // Modal functionality
+      function initModal() {
+        const modal = document.getElementById('coming-soon-modal');
+        const closeBtn = document.getElementById('modal-close');
+        const modalTriggers = document.querySelectorAll('[data-modal-trigger]');
+
+        function openModal() {
+          if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          }
+        }
+
+        function closeModal() {
+          if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        }
+
+        modalTriggers.forEach(trigger => {
+          trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+          });
+        });
+
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closeModal);
+        }
+
+        if (modal) {
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+              closeModal();
+            }
+          });
+        }
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && modal?.classList.contains('active')) {
+            closeModal();
+          }
+        });
+      }
+
+      // Mobile menu functionality
+      function initMobileMenu() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+          });
+        }
+      }
+
+      // Initialize on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        initModal();
+        initMobileMenu();
+      });
+    </script>
+  </body>
+</html>
