@@ -14,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="hero-image-wrapper">
         <img
-          src="/images/gregory-massamba.png"
+          src="/images/gregory-massamba-2.png"
           alt="Grégory MASSAMBA"
           class="hero-image"
           width="500"
@@ -22,11 +22,6 @@ import Layout from '../layouts/Layout.astro';
           loading="eager"
         />
       </div>
-    </div>
-    <div class="hero-wave">
-      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C480,100 960,0 1440,60 L1440,120 L0,120 Z" fill="var(--color-bg-alt)"/>
-      </svg>
     </div>
   </section>
 
@@ -76,7 +71,7 @@ import Layout from '../layouts/Layout.astro';
     position: relative;
     background: linear-gradient(135deg, #014d5e 0%, #026f86 100%);
     color: white;
-    padding: var(--spacing-3xl) 0 0;
+    padding: var(--spacing-3xl) 0;
     overflow: hidden;
   }
 
@@ -90,7 +85,6 @@ import Layout from '../layouts/Layout.astro';
     flex-direction: column-reverse;
     align-items: center;
     gap: var(--spacing-2xl);
-    padding-bottom: var(--spacing-2xl);
   }
 
   .hero-text {
@@ -133,21 +127,9 @@ import Layout from '../layouts/Layout.astro';
     object-position: center top;
   }
 
-  .hero-wave {
-    position: relative;
-    width: 100%;
-    line-height: 0;
-    margin-top: -1px;
-  }
-
-  .hero-wave svg {
-    width: 100%;
-    height: 80px;
-  }
-
   /* Letter Section */
   .letter-section {
-    padding: var(--spacing-2xl) 0 var(--spacing-3xl);
+    padding: var(--spacing-3xl) 0;
     background-color: var(--color-bg-alt);
   }
 
@@ -213,13 +195,12 @@ import Layout from '../layouts/Layout.astro';
   /* Medium screens and up */
   @media (min-width: 768px) {
     .hero {
-      padding: var(--spacing-3xl) 0 0;
+      padding: var(--spacing-3xl) 0 calc(var(--spacing-3xl) * 1.5);
     }
 
     .hero-content {
       flex-direction: row;
       justify-content: space-between;
-      padding-bottom: var(--spacing-3xl);
     }
 
     .hero-text {
@@ -229,10 +210,6 @@ import Layout from '../layouts/Layout.astro';
 
     .hero-image {
       width: 380px;
-    }
-
-    .hero-wave svg {
-      height: 120px;
     }
 
     .letter {
