@@ -8,9 +8,8 @@ import Layout from '../layouts/Layout.astro';
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <div class="hero-text">
-        <h1 class="hero-title">Nandy Vitalité</h1>
-        <p class="hero-candidate">Grégory MASSAMBA</p>
-        <p class="hero-subtitle">Candidat aux élections municipales de Nandy 2026</p>
+        <h1 class="hero-title">Grégory Massamba</h1>
+        <p class="hero-subtitle">Tête de liste Nandy Vitalité pour l'élection municipale 2026</p>
         <p class="hero-tagline">Ensemble, écrivons le prochain chapitre de notre histoire commune.</p>
       </div>
       <div class="hero-image-wrapper">
@@ -18,8 +17,8 @@ import Layout from '../layouts/Layout.astro';
           src="/images/gregory-massamba.png"
           alt="Grégory MASSAMBA"
           class="hero-image"
-          width="400"
-          height="450"
+          width="500"
+          height="560"
           loading="eager"
         />
       </div>
@@ -55,8 +54,11 @@ import Layout from '../layouts/Layout.astro';
         <p>Ensemble, avec votre confiance et votre participation, nous écrirons le prochain chapitre de notre histoire commune.</p>
 
         <div class="letter-signature">
-          <p class="signature-text">Vous pouvez compter sur mon engagement.</p>
-          <p class="signature-name">Grégory MASSAMBA</p>
+          <img
+            src="/images/signature-manuscrite.png"
+            alt="Vous pouvez compter sur mon engagement - Signature de Grégory Massamba"
+            class="signature-image"
+          />
         </div>
       </article>
     </div>
@@ -74,9 +76,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    display: none;
   }
 
   .hero-content {
@@ -96,14 +96,6 @@ import Layout from '../layouts/Layout.astro';
     color: white;
     margin-bottom: var(--spacing-xs);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-
-  .hero-candidate {
-    font-size: clamp(1.3rem, 3.5vw, 1.8rem);
-    color: var(--color-accent);
-    font-weight: 600;
-    margin-bottom: var(--spacing-sm);
-    font-family: var(--font-heading);
   }
 
   .hero-subtitle {
@@ -126,7 +118,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .hero-image {
-    width: 220px;
+    width: 280px;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -193,20 +185,10 @@ import Layout from '../layouts/Layout.astro';
     text-align: right;
   }
 
-  .signature-text {
-    font-family: var(--font-heading);
-    font-style: italic;
-    font-size: 1.1rem !important;
-    color: var(--color-text) !important;
-    margin-bottom: var(--spacing-sm) !important;
-  }
-
-  .signature-name {
-    font-family: var(--font-heading);
-    font-size: 1.3rem !important;
-    font-weight: 700;
-    color: var(--color-primary) !important;
-    margin: 0 !important;
+  .signature-image {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
   }
 
   /* Medium screens and up */
@@ -226,7 +208,7 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .hero-image {
-      width: 300px;
+      width: 380px;
     }
 
     .letter {
@@ -237,7 +219,7 @@ import Layout from '../layouts/Layout.astro';
   /* Large screens */
   @media (min-width: 1024px) {
     .hero-image {
-      width: 360px;
+      width: 450px;
     }
   }
 </style>
