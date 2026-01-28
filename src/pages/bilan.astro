@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Bilan 2020-2026">
+  <section class="bilan-section">
+    <div class="bilan-container">
+      <img
+        src="/images/bilan/bilan-1.jpg"
+        alt="Bilan du mandat 2020-2026 - Couverture"
+        class="bilan-image"
+        loading="eager"
+      />
+      <img
+        src="/images/bilan/bilan-2.jpg"
+        alt="Bilan du mandat 2020-2026 - Un bilan remarquable"
+        class="bilan-image"
+        loading="lazy"
+      />
+      <img
+        src="/images/bilan/bilan-3.jpg"
+        alt="Bilan du mandat 2020-2026 - Une ville solidaire et investie"
+        class="bilan-image"
+        loading="lazy"
+      />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .bilan-section {
+    background-color: var(--color-bg-alt);
+    min-height: 100vh;
+  }
+
+  .bilan-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .bilan-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: 768px) {
+    .bilan-container {
+      padding: var(--spacing-2xl) var(--spacing-lg);
+      gap: var(--spacing-lg);
+    }
+
+    .bilan-image {
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+  }
+</style>
