@@ -1,0 +1,226 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Candidature">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Grégory Massamba</h1>
+        <p class="hero-subtitle">Tête de liste Nandy Vitalité pour l'élection municipale 2026</p>
+        <p class="hero-tagline">Ensemble, écrivons le prochain chapitre de notre histoire commune.</p>
+      </div>
+      <div class="hero-image-wrapper">
+        <img
+          src="/images/gregory-massamba-2.png"
+          alt="Grégory MASSAMBA"
+          class="hero-image"
+          width="500"
+          height="560"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Letter Section -->
+  <section class="letter-section">
+    <div class="container">
+      <h2 class="section-title">Ma lettre aux Nandéennes et Nandéens</h2>
+
+      <article class="letter">
+        <p class="letter-salutation">Chères Nandéennes, chers Nandéens,</p>
+
+        <p>Nandy est la ville où j'ai choisi de construire ma vie de famille et de m'investir pleinement depuis plus de vingt ans. Mon engagement a débuté au sein des écoles, à travers cinq années d'implication associative qui ont façonné ma vision du service aux autres. Il s'est poursuivi au sein de la municipalité, où les responsabilités confiées ces douze dernières années comme Adjoint au Maire en charge du scolaire, du personnel puis des travaux et de l'urbanisme, m'ont amené à vous rencontrer sur le terrain, dans les associations, les écoles ou les quartiers et m'ont permis d'agir concrètement à vos côtés.</p>
+
+        <p>Aujourd'hui, alors qu'une nouvelle étape s'ouvre pour Nandy, je souhaite me présenter à vous d'abord comme un habitant engagé, mais plus encore comme un élu prêt à poursuivre ce travail collectif.</p>
+
+        <p><strong>Fidèle à cet esprit, je sollicite votre confiance en me portant candidat comme tête de liste aux prochaines élections municipales.</strong></p>
+
+        <p>En tant que 1er Adjoint au Maire sortant, j'ai eu l'honneur de participer à un travail d'équipe exigeant dans un contexte de défis nombreux. Malgré le désengagement de l'État, nous avons su préserver l'équilibre financier de la commune, développer de nouveaux services, renforcer la vie associative et améliorer le cadre de vie, tout en restant fidèles à nos valeurs de proximité, de constance et de transparence.</p>
+
+        <p>De nombreux équipements ont été créés ou rénovés ces dernières années : city-stade, parcours de santé, pumptrack, aires de jeux, jardins familiaux collectifs, ainsi que d'importants travaux dans les écoles et la rénovation des toitures des bâtiments communaux. Ces réalisations traduisent notre volonté de concilier ambition, maîtrise financière et respect des engagements pris devant les habitants.</p>
+
+        <p>Les projets d'aménagement dans les quartiers des Bois et de la Forêt sont désormais lancés. Ils incarnent une vision d'une ville équilibrée, durable et attentive à la réhabilitation comme au développement de l'offre commerciale. Notre mission est maintenant de les accompagner avec vigilance et rigueur pour garantir leur pleine réussite.</p>
+
+        <p>Notre action s'est toujours construite dans le dialogue et la volonté de répondre concrètement à vos besoins. <strong>C'est dans cette même démarche d'écoute et de responsabilité que je souhaite poursuivre, avec vous, l'engagement des six prochaines années.</strong></p>
+
+        <p>Avec une équipe expérimentée et renouvelée, issue du tissu associatif et citoyen, je présenterai dans les semaines à venir des propositions concrètes, audacieuses et réalistes pour continuer à faire de Nandy une ville responsable, solidaire et accueillante.</p>
+
+        <p>Dans un contexte marqué par la montée du populisme et des extrêmes, j'ai à cœur de rassembler autour d'un projet positif et humaniste. <strong>Nandy mérite l'unité, la sérénité et une action publique exigeante et bienveillante.</strong></p>
+
+        <p>Ensemble, avec votre confiance et votre participation, nous écrirons le prochain chapitre de notre histoire commune.</p>
+
+        <div class="letter-signature">
+          <img
+            src="/images/signature.png"
+            alt="Vous pouvez compter sur mon engagement - Signature de Grégory Massamba"
+            class="signature-image"
+          />
+        </div>
+      </article>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, #014d5e 0%, #026f86 100%);
+    color: white;
+    padding: var(--spacing-3xl) 0;
+    overflow: hidden;
+  }
+
+  .hero-overlay {
+    display: none;
+  }
+
+  .hero-content {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: var(--spacing-2xl);
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    color: white;
+    margin-bottom: var(--spacing-xs);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-lg);
+    font-weight: 500;
+  }
+
+  .hero-tagline {
+    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    color: var(--color-accent);
+    font-style: italic;
+    font-family: var(--font-heading);
+    margin: 0;
+  }
+
+  .hero-image-wrapper {
+    flex-shrink: 0;
+  }
+
+  .hero-image {
+    width: 320px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 20px 0 40px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* Letter Section */
+  .letter-section {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-bg-alt);
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    position: relative;
+  }
+
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-secondary);
+    margin: var(--spacing-md) auto 0;
+    border-radius: 2px;
+  }
+
+  .letter {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-bg);
+    padding: var(--spacing-xl);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .letter p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .letter-salutation {
+    font-family: var(--font-heading);
+    font-size: 1.15rem !important;
+    font-weight: 600;
+    color: var(--color-primary) !important;
+    margin-bottom: var(--spacing-xl) !important;
+  }
+
+  .letter strong {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .letter-signature {
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-border);
+    text-align: right;
+  }
+
+  .signature-image {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+  }
+
+  /* Medium screens and up */
+  @media (min-width: 768px) {
+    .hero {
+      padding: var(--spacing-3xl) 0 calc(var(--spacing-3xl) * 1.5);
+    }
+
+    .hero-content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .hero-text {
+      text-align: left;
+      flex: 1;
+    }
+
+    .hero-image {
+      width: 420px;
+    }
+
+    .letter {
+      padding: var(--spacing-2xl) var(--spacing-3xl);
+    }
+  }
+
+  /* Large screens */
+  @media (min-width: 1024px) {
+    .hero-image {
+      width: 500px;
+    }
+  }
+</style>
