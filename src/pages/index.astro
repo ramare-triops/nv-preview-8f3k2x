@@ -33,22 +33,26 @@ import Layout from '../layouts/Layout.astro';
     padding: var(--spacing-md);
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: var(--spacing-sm);
   }
 
   .team-image {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   @media (min-width: 768px) {
     .team-container {
       padding: var(--spacing-xl) var(--spacing-lg);
+      gap: var(--spacing-md);
     }
 
     .team-image {
-      border-radius: 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
   }
 </style>
