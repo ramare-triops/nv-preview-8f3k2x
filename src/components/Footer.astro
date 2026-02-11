@@ -42,9 +42,16 @@ const footerLinks = [
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copyright">
-        &copy; {currentYear} Nandy Vitalité - Tous droits réservés
-      </p>
+      <div class="footer-bottom-left">
+        <p class="footer-copyright">
+          &copy; {currentYear} Nandy Vitalité - Tous droits réservés
+        </p>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="footer-facebook" aria-label="Facebook">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854V15.47H7.078V12h3.047V9.356c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.875V12h3.328l-.532 3.47h-2.796v8.384C19.612 22.954 24 17.99 24 12z"/>
+          </svg>
+        </a>
+      </div>
       <p class="footer-legal">
         Site de campagne électorale
       </p>
@@ -129,6 +136,24 @@ const footerLinks = [
     text-align: center;
   }
 
+  .footer-bottom-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .footer-facebook {
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    transition: opacity var(--transition-fast);
+  }
+
+  .footer-facebook:hover {
+    opacity: 0.7;
+  }
+
   .footer-copyright {
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.85rem;
@@ -168,6 +193,11 @@ const footerLinks = [
     .footer-bottom {
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .footer-bottom-left {
+      align-items: flex-start;
     }
   }
 </style>
