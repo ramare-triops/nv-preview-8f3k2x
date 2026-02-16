@@ -1,4 +1,6 @@
 ---
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+
 const navLinks = [
   { label: 'Candidature', href: '/candidature', isModal: false },
   { label: 'Bilan', href: '/bilan', isModal: false },
@@ -14,6 +16,11 @@ const quartierLinks = [
   { label: 'B', href: '#', isModal: true },
   { label: 'C', href: '#', isModal: true },
 ];
+
+function isActive(href: string) {
+  const normalized = href.replace(/\/$/, '') || '/';
+  return normalized === currentPath;
+}
 ---
 
 <header class="header">
@@ -32,7 +39,7 @@ const quartierLinks = [
                 {link.label}
               </a>
             ) : (
-              <a href={link.href} class="nav-link">
+              <a href={link.href} class:list={["nav-link", { active: isActive(link.href) }]}>
                 {link.label}
               </a>
             )}
@@ -89,7 +96,7 @@ const quartierLinks = [
               {link.label}
             </a>
           ) : (
-            <a href={link.href} class="nav-link-mobile">
+            <a href={link.href} class:list={["nav-link-mobile", { active: isActive(link.href) }]}>
               {link.label}
             </a>
           )}
@@ -174,10 +181,14 @@ const quartierLinks = [
     font-size: 0.9rem;
   }
 
-  .nav-link:hover,
-  .nav-link.active {
+  .nav-link:hover {
     color: #016f87;
     background-color: var(--color-bg-alt);
+  }
+
+  .nav-link.active {
+    color: var(--color-primary);
+    font-weight: 600;
   }
 
   /* Dropdown - Desktop */
@@ -336,10 +347,15 @@ const quartierLinks = [
     transition: all var(--transition-fast);
   }
 
-  .nav-link-mobile:hover,
-  .nav-link-mobile.active {
+  .nav-link-mobile:hover {
     color: #016f87;
     background-color: var(--color-bg-alt);
+  }
+
+  .nav-link-mobile.active {
+    color: var(--color-primary);
+    font-weight: 600;
+    border-left: 3px solid var(--color-primary);
   }
 
   /* Dropdown - Mobile */
