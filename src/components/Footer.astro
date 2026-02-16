@@ -1,5 +1,11 @@
 ---
 const currentYear = new Date().getFullYear();
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+function isActive(href: string) {
+  const normalized = href.replace(/\/$/, '') || '/';
+  return normalized === currentPath;
+}
 
 const footerLinks = [
   { label: 'Candidature', href: '/candidature', isModal: false },
@@ -39,7 +45,7 @@ const quartierLinks = [
                   {link.label}
                 </a>
               ) : (
-                <a href={link.href} class="footer-link">
+                <a href={link.href} class:list={["footer-link", { active: isActive(link.href) }]}>
                   {link.label}
                 </a>
               )}
@@ -149,6 +155,11 @@ const quartierLinks = [
 
   .footer-link:hover {
     color: var(--color-accent);
+  }
+
+  .footer-link.active {
+    color: #d69e2e;
+    font-weight: 600;
   }
 
   /* Footer Dropdown */
