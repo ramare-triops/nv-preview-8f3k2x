@@ -189,11 +189,20 @@ const quartierLinks = [
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    background: none;
+    background-color: #019ee4;
+    color: white;
     border: none;
+    border-radius: 4px;
+    padding: var(--spacing-sm) var(--spacing-md);
     cursor: pointer;
     font-family: inherit;
+    font-weight: 500;
     font-size: 0.9rem;
+    transition: all var(--transition-fast);
+  }
+
+  .dropdown-toggle:hover {
+    background-color: #016f87;
   }
 
   .dropdown-arrow {
@@ -301,6 +310,9 @@ const quartierLinks = [
     top: 100%;
     left: 0;
     right: 0;
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     background-color: var(--color-bg);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-top: 1px solid var(--color-border);
@@ -336,11 +348,19 @@ const quartierLinks = [
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background: none;
+    background-color: #019ee4;
+    color: white;
     border: none;
     cursor: pointer;
     font-family: inherit;
     font-size: inherit;
+    font-weight: 500;
+    padding: var(--spacing-md) var(--spacing-lg);
+    transition: all var(--transition-fast);
+  }
+
+  .dropdown-toggle-mobile:hover {
+    background-color: #016f87;
   }
 
   .dropdown-arrow-mobile {

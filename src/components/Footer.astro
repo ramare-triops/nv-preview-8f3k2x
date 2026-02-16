@@ -160,10 +160,17 @@ const quartierLinks = [
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    background: none;
-    border: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    padding: var(--spacing-xs) var(--spacing-sm);
     cursor: pointer;
     font-family: inherit;
+    transition: all var(--transition-fast);
+  }
+
+  .footer-dropdown-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.25);
   }
 
   .footer-dropdown-arrow {
