@@ -99,6 +99,16 @@ const {
             menuToggle.setAttribute('aria-expanded', String(isOpen));
           });
         }
+
+        // Mobile dropdown toggle
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle-mobile');
+        dropdownToggles.forEach(toggle => {
+          toggle.addEventListener('click', () => {
+            const menu = toggle.nextElementSibling;
+            const isOpen = menu.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', String(isOpen));
+          });
+        });
       }
 
       // Initialize on page load

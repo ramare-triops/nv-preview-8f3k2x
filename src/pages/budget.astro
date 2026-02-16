@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Budget">
+  <section class="budget-section">
+    <div class="budget-container">
+      <img
+        src="/images/budget/Page 01.png"
+        alt="Budget - Page 1"
+        class="budget-image"
+        loading="eager"
+      />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .budget-section {
+    background-color: var(--color-bg-alt);
+    min-height: 100vh;
+  }
+
+  .budget-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .budget-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: 768px) {
+    .budget-container {
+      padding: var(--spacing-xl) var(--spacing-lg);
+      gap: var(--spacing-md);
+    }
+
+    .budget-image {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+  }
+</style>
