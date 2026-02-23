@@ -18,7 +18,9 @@ const footerLinks = [
 ];
 
 const quartierLinks = [
-  { label: 'Bientôt disponible', href: '#', isModal: true },
+  { label: 'Quartier de la Forêt', href: '/quartier-foret', isModal: false },
+  { label: 'Quartier des Bois', href: '/quartier-bois', isModal: false },
+  { label: 'Quartiers Balory, Bourg, Sablonnière, Villemur', href: '/quartier-balory', isModal: false },
 ];
 ---
 
@@ -59,9 +61,15 @@ const quartierLinks = [
             <ul class="footer-dropdown-menu">
               {quartierLinks.map(link => (
                 <li>
-                  <a href={link.href} data-modal-trigger class="footer-dropdown-link">
-                    {link.label}
-                  </a>
+                  {link.isModal ? (
+                    <a href={link.href} data-modal-trigger class="footer-dropdown-link">
+                      {link.label}
+                    </a>
+                  ) : (
+                    <a href={link.href} class="footer-dropdown-link">
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
