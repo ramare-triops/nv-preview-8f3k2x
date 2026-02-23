@@ -21,6 +21,8 @@ function isActive(href: string) {
   const normalized = href.replace(/\/$/, '') || '/';
   return normalized === currentPath;
 }
+
+const isQuartierActive = quartierLinks.some(link => isActive(link.href));
 ---
 
 <header class="header">
@@ -46,7 +48,7 @@ function isActive(href: string) {
           </li>
         ))}
         <li class="dropdown">
-          <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+          <button class:list={["nav-link", "dropdown-toggle", { active: isQuartierActive }]} aria-expanded="false" aria-haspopup="true">
             Votre quartier
             <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -109,7 +111,7 @@ function isActive(href: string) {
         </li>
       ))}
       <li class="dropdown-mobile">
-        <button class="nav-link-mobile dropdown-toggle-mobile" aria-expanded="false">
+        <button class:list={["nav-link-mobile", "dropdown-toggle-mobile", { active: isQuartierActive }]} aria-expanded="false">
           Votre quartier
           <svg class="dropdown-arrow-mobile" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
