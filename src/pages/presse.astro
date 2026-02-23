@@ -19,13 +19,28 @@ import Layout from '../layouts/Layout.astro';
         />
 
         <div class="article-body">
-          <p>À 52 ans, Grégory Massamba est un visage bien connu des Nandéens. Premier adjoint au maire depuis 2020, il siège au conseil municipal depuis 2014. C'est donc tout naturellement qu'il a décidé de prendre la tête de la liste « Nandy Vitalité » pour les prochaines élections municipales, après l'annonce de René Réthoré de ne pas briguer un nouveau mandat.</p>
+          <p>Elu pour la première fois en 2014 -il était alors deuxième adjoint en charge des affaires scolaires-, réélu en 2020 au poste de premier adjoint (urbanisme, travaux et cadre de vie), Grégory Massamba sera, les 15 et 22 mars prochains, candidat au fauteuil de maire de <strong>Nandy</strong>.</p>
 
-          <p>« Je souhaite poursuivre le travail engagé depuis 2020 et continuer à développer notre commune dans un esprit de proximité et d'écoute des habitants », explique Grégory Massamba. « Le bilan de notre équipe est positif et nous avons encore beaucoup de projets à mener à bien. »</p>
+          <h2 class="article-subtitle">De premier adjoint à maire ?</h2>
 
-          <p>Sur le bilan du mandat écoulé, le premier adjoint met en avant les investissements réalisés dans la commune : amélioration du cadre de vie, sécurité, rénovation des équipements publics et gestion rigoureuse des finances municipales.</p>
+          <p>René Réthoré ayant annoncé sa décision de ne pas solliciter un nouveau mandat, c'est son premier adjoint qui a donc pris le relais. « L'expérience acquise lors des précédents mandats m'a amené à vouloir prendre le relais de René Réthoré, explique le candidat. L'idée, c'est de défendre et de consolider tout le travail qui a été fait ces dernières années ».</p>
 
-          <p>Parmi les priorités du candidat pour le prochain mandat figurent la poursuite des projets d'aménagement, le renforcement du lien social et la transition écologique. « Nous voulons une ville attractive, solidaire et tournée vers l'avenir », résume Grégory Massamba.</p>
+          <p>Avec une liste déjà bouclée et renouvelée à 60 %, Grégory Massamba est désormais lancé pour sa première campagne en tant que tête de liste. « Nous avons eu pas mal de réunions, rappelle-t-il. D'abord pour préparer le bilan, mais aussi pour la construction de l'équipe et surtout la préparation du programme ».</p>
+
+          <h2 class="article-subtitle">Un programme dans la continuité</h2>
+
+          <p>Tout juste bouclé, ce programme proposera une continuité claire de ce qui s'est fait ces dernières années à Nandy. « Nous allons continuer ce qui a été fait en matière de transition écologique, avec la poursuite des travaux de rénovation des écoles du Balory et de Villemur, énumère-t-il. Nous allons aussi engager des travaux pour installer des espaces végétalisés et des ombrières dans les cours des trois écoles. Côté solidarité, nous allons continuer à proposer des tarifs municipaux modérés aux Nandéens, maintenir les subventions aux associations, et tout cela sans toucher aux impôts, dont nous n'avons pas augmenté les taux depuis 17 ans. Pour ce qui est de la sécurité, nous envisageons quelques caméras de vidéosurveillance en plus, peut-être un radar pédagogique, et on espère surtout poursuive cette belle coopération avec Cesson pour la police intercommunale… Enfin, côté santé, nous travaillons avec les autorités compétentes pour au moins maintenir l'offre de services à Nandy. »</p>
+
+          <blockquote class="article-quote">
+            <p>« Mercure et Windsor, deux projets importants dont il faut assurer l'aboutissement. »</p>
+            <cite>Grégory Massamba, candidat</cite>
+          </blockquote>
+
+          <p>Mais l'un des dossiers les plus importants de la prochaine mandature sera évidemment les deux projets immobiliers et commerciaux déjà en route, le « Windsor » aux Bois et le « Mercure » au quartier de la Forêt. « Ce sont deux projets importants dont il faut garantir l'aboutissement, note Grégory Massamba. Aux Bois, nous aurons 500 m2 de surface commerciale, avec une supérette de 350 m2. Quant au projet Mercure, il y aura une surface commerciale de 1 000 m2. Cela fait 10 ans que l'on se bat pour ça, il n'est pas question de le remettre en cause. J'ai entendu certaines critiques, mais les permis ont été validés, il n'y a pas eu de recours. Il faut que l'on propose du commerce de proximité, les Nandéens l'attendent. Et nous n'avons de pas de volonté d'aller au-delà de ces deux projets. Le Plu nous garantit de conserver le visage de notre ville… »</p>
+
+          <p>Avec des moyens financiers limités, comme pour toutes les communes -Nandy a perdu 6 millions d'euros de dotation en 12 ans-, l'avenir passe aussi par la mutualisation avec les communes voisines, à l'image de la police intercommunale. « C'est évidemment une piste à exploiter pour réduire les coûts. Nous l'avons fait pour la cantine scolaire avec Grand Paris Sud, et il est évident qu'il y a d'autres pistes à explorer avec nos voisins… »</p>
+
+          <p class="article-author">Eric Vanovertveld</p>
         </div>
       </article>
 
@@ -89,6 +104,47 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.8;
     color: var(--color-text);
     margin-bottom: var(--spacing-md);
+  }
+
+  .article-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .article-quote {
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-lg);
+    border-left: 4px solid var(--color-accent);
+    background-color: var(--color-bg-alt);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .article-quote p {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+  }
+
+  .article-quote cite {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .article-author {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-border);
+    font-style: italic;
+    color: var(--color-text-light);
+    font-size: 0.9rem;
   }
 
   @media (min-width: 768px) {
