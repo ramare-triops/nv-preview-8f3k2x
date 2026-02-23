@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Presse">
+  <section class="presse-section">
+    <div class="presse-container">
+
+      <article class="article">
+        <p class="article-source">La République de Seine-et-Marne — Sénart et ses environs</p>
+        <h1 class="article-title">« Poursuivre le travail engagé » : Grégory Massamba veut prendre la suite de René Réthoré</h1>
+        <p class="article-chapeau">René Réthoré ayant décidé de ne pas se représenter lors des prochaines municipales, c'est son premier adjoint, Grégory Massamba, qui conduira la liste « Nandy Vitalité ».</p>
+
+        <img
+          src="/images/presse/article-republique-seine-et-marne.png"
+          alt="Article La République de Seine-et-Marne — Grégory Massamba"
+          class="article-image"
+          loading="eager"
+        />
+
+        <div class="article-body">
+          <p>À 52 ans, Grégory Massamba est un visage bien connu des Nandéens. Premier adjoint au maire depuis 2020, il siège au conseil municipal depuis 2014. C'est donc tout naturellement qu'il a décidé de prendre la tête de la liste « Nandy Vitalité » pour les prochaines élections municipales, après l'annonce de René Réthoré de ne pas briguer un nouveau mandat.</p>
+
+          <p>« Je souhaite poursuivre le travail engagé depuis 2020 et continuer à développer notre commune dans un esprit de proximité et d'écoute des habitants », explique Grégory Massamba. « Le bilan de notre équipe est positif et nous avons encore beaucoup de projets à mener à bien. »</p>
+
+          <p>Sur le bilan du mandat écoulé, le premier adjoint met en avant les investissements réalisés dans la commune : amélioration du cadre de vie, sécurité, rénovation des équipements publics et gestion rigoureuse des finances municipales.</p>
+
+          <p>Parmi les priorités du candidat pour le prochain mandat figurent la poursuite des projets d'aménagement, le renforcement du lien social et la transition écologique. « Nous voulons une ville attractive, solidaire et tournée vers l'avenir », résume Grégory Massamba.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .presse-section {
+    background-color: var(--color-bg-alt);
+  }
+
+  .presse-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+  }
+
+  .article {
+    background-color: var(--color-bg);
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-lg);
+  }
+
+  .article-source {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    font-style: italic;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .article-title {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    color: var(--color-primary);
+    line-height: 1.3;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .article-chapeau {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .article-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .article-body p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+  }
+
+  @media (min-width: 768px) {
+    .presse-container {
+      padding: var(--spacing-xl) var(--spacing-lg);
+    }
+
+    .article {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      padding: var(--spacing-2xl);
+    }
+
+    .article-image {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+  }
+</style>
