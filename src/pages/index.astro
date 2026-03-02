@@ -2,32 +2,27 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Notre Équipe">
-  <section class="team-section">
-    <div class="team-container">
-      <img
-        src="/images/team/P01.png"
-        alt="Notre Équipe - Page 1"
-        class="team-image"
-        loading="eager"
-      />
-      <img
-        src="/images/team/P02.png"
-        alt="Notre Équipe - Page 2"
-        class="team-image"
-        loading="lazy"
-      />
+<Layout title="Programme">
+  <section class="programme-section">
+    <div class="programme-container">
+      <img src="/images/programme/page-01.png" alt="Programme - Page 1" class="programme-image" loading="eager" />
+      <img src="/images/programme/page-02.png" alt="Programme - Page 2" class="programme-image" loading="lazy" />
+      <img src="/images/programme/page-03.png" alt="Programme - Page 3" class="programme-image" loading="lazy" />
+      <img src="/images/programme/page-04.png" alt="Programme - Page 4" class="programme-image" loading="lazy" />
+      <img src="/images/programme/page-05.png" alt="Programme - Page 5" class="programme-image" loading="lazy" />
+      <img src="/images/programme/page-06.png" alt="Programme - Page 6" class="programme-image" loading="lazy" />
+      <img src="/images/programme/page-07.png" alt="Programme - Page 7" class="programme-image" loading="lazy" />
     </div>
   </section>
 </Layout>
 
 <style>
-  .team-section {
+  .programme-section {
     background-color: var(--color-bg-alt);
     min-height: 100vh;
   }
 
-  .team-container {
+  .programme-container {
     max-width: 800px;
     margin: 0 auto;
     padding: var(--spacing-md);
@@ -36,7 +31,7 @@ import Layout from '../layouts/Layout.astro';
     gap: var(--spacing-sm);
   }
 
-  .team-image {
+  .programme-image {
     width: 100%;
     height: auto;
     display: block;
@@ -45,12 +40,12 @@ import Layout from '../layouts/Layout.astro';
   }
 
   @media (min-width: 768px) {
-    .team-container {
+    .programme-container {
       padding: var(--spacing-xl) var(--spacing-lg);
       gap: var(--spacing-md);
     }
 
-    .team-image {
+    .programme-image {
       border-radius: 8px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }

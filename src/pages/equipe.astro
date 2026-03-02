@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Notre Équipe">
+  <section class="team-section">
+    <div class="team-container">
+      <img
+        src="/images/team/P01.png"
+        alt="Notre Équipe - Page 1"
+        class="team-image"
+        loading="eager"
+      />
+      <img
+        src="/images/team/P02.png"
+        alt="Notre Équipe - Page 2"
+        class="team-image"
+        loading="lazy"
+      />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .team-section {
+    background-color: var(--color-bg-alt);
+    min-height: 100vh;
+  }
+
+  .team-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .team-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: 768px) {
+    .team-container {
+      padding: var(--spacing-xl) var(--spacing-lg);
+      gap: var(--spacing-md);
+    }
+
+    .team-image {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+  }
+</style>
