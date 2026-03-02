@@ -4,21 +4,25 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 const navLinks = [
   { label: 'Candidature', href: '/candidature', isModal: false },
   { label: 'Bilan', href: '/bilan', isModal: false },
-  { label: 'Notre Équipe', href: '/', isModal: false },
-  { label: 'Programme', href: '#', isModal: true },
+  { label: 'Notre Équipe', href: '/equipe', isModal: false },
+  { label: 'Programme', href: '/', isModal: false },
   { label: 'Budget', href: '/budget', isModal: false },
-  { label: 'Presse', href: '#', isModal: true },
+  { label: 'Presse', href: '/presse', isModal: false },
   { label: 'Contact', href: 'mailto:nandyvitalite@gmail.com', isModal: false },
 ];
 
 const quartierLinks = [
-  { label: 'Bientôt disponible', href: '#', isModal: true },
+  { label: 'Quartier de la Forêt', href: '/quartier-foret', isModal: false },
+  { label: 'Quartier des Bois', href: '/quartier-bois', isModal: false },
+  { label: 'Quartiers Balory, Bourg, Sablonnière, Villemur', href: '/quartier-balory', isModal: false },
 ];
 
 function isActive(href: string) {
   const normalized = href.replace(/\/$/, '') || '/';
   return normalized === currentPath;
 }
+
+const isQuartierActive = quartierLinks.some(link => isActive(link.href));
 ---
 
 <header class="header">
@@ -44,7 +48,7 @@ function isActive(href: string) {
           </li>
         ))}
         <li class="dropdown">
-          <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+          <button class:list={["nav-link", "dropdown-toggle", { active: isQuartierActive }]} aria-expanded="false" aria-haspopup="true">
             Votre quartier
             <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -53,9 +57,15 @@ function isActive(href: string) {
           <ul class="dropdown-menu">
             {quartierLinks.map(link => (
               <li>
-                <a href={link.href} data-modal-trigger class="dropdown-link">
-                  {link.label}
-                </a>
+                {link.isModal ? (
+                  <a href={link.href} data-modal-trigger class="dropdown-link">
+                    {link.label}
+                  </a>
+                ) : (
+                  <a href={link.href} class="dropdown-link">
+                    {link.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -101,7 +111,7 @@ function isActive(href: string) {
         </li>
       ))}
       <li class="dropdown-mobile">
-        <button class="nav-link-mobile dropdown-toggle-mobile" aria-expanded="false">
+        <button class:list={["nav-link-mobile", "dropdown-toggle-mobile", { active: isQuartierActive }]} aria-expanded="false">
           Votre quartier
           <svg class="dropdown-arrow-mobile" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -110,9 +120,15 @@ function isActive(href: string) {
         <ul class="dropdown-menu-mobile">
           {quartierLinks.map(link => (
             <li>
-              <a href={link.href} data-modal-trigger class="nav-link-mobile dropdown-sub-link">
-                {link.label}
-              </a>
+              {link.isModal ? (
+                <a href={link.href} data-modal-trigger class="nav-link-mobile dropdown-sub-link">
+                  {link.label}
+                </a>
+              ) : (
+                <a href={link.href} class="nav-link-mobile dropdown-sub-link">
+                  {link.label}
+                </a>
+              )}
             </li>
           ))}
         </ul>

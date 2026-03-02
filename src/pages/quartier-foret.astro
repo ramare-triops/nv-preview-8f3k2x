@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Quartier de la Forêt">
+  <section class="quartier-section">
+    <div class="quartier-container">
+      <img
+        src="/images/quartier/Quartier de la Foret.png"
+        alt="Quartier de la Forêt"
+        class="quartier-image"
+        loading="eager"
+      />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .quartier-section {
+    background-color: var(--color-bg-alt);
+  }
+
+  .quartier-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .quartier-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: 768px) {
+    .quartier-container {
+      padding: var(--spacing-xl) var(--spacing-lg);
+      gap: var(--spacing-md);
+    }
+
+    .quartier-image {
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+  }
+</style>
